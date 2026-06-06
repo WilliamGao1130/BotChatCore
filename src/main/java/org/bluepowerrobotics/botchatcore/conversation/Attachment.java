@@ -1,4 +1,4 @@
 package org.bluepowerrobotics.botchatcore.conversation;
 
-public class TextFile implements Attachment{
+public interface Attachment {
 }
