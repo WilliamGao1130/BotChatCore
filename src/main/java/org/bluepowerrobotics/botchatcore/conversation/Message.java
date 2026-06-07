@@ -10,7 +10,7 @@ public class Message {
     private List<String> childrenIds;     // 子节点ID列表
     private Role role;                    // SYSTEM / USER / MODEL
     private String content;               // 文本内容
-    private List<Attachment> attachments; // 附件列表（TextFile, PictureFile等），仅USER角色
+    private List<Attachment> attachments; // 附件列表（TextFile, PictureFile等）
     private String modelId;               // 生成此消息的模型（仅MODEL角色）
     private long timestamp;
     private boolean isActive;             // 当前活跃分支标记
