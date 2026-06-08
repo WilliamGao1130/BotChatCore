@@ -12,4 +12,5 @@ public class Conversation {
     private long updatedAt;
     private String modelId;                 // 默认模型
     private Map<String, Object> metadata;
+
 }
