@@ -1,4 +1,22 @@
 package org.bluepowerrobotics.botchatcore.adapter;
 
-public class OpenAI {
+import org.bluepowerrobotics.botchatcore.config.ModelConfig;
+import org.bluepowerrobotics.botchatcore.conversation.Conversation;
+import org.bluepowerrobotics.botchatcore.conversation.Message;
+
+public class OpenAI implements ApiAdapter{
+    @Override
+    public String getProviderName() {
+        return "";
+    }
+
+    @Override
+    public String getRequestBody(Conversation conversation, ModelConfig modelConfig) {
+        return "";
+    }
+
+    @Override
+    public Message getResponse(String ResponseBody) {
+        return null;
+    }
 }

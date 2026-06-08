@@ -1,10 +1,8 @@
 package org.bluepowerrobotics.botchatcore.storage;
 
 import org.bluepowerrobotics.botchatcore.conversation.Conversation;
-import org.bluepowerrobotics.botchatcore.conversation.Message;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * 对话记录持久化接口。

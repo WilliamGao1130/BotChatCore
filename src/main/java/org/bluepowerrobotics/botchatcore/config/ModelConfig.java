@@ -7,4 +7,8 @@ public class ModelConfig {
     private String baseURL;
     private long   maxToken;
     private String showName;
+
+    public String getProvider() {
+        return provider;
+    }
 }
