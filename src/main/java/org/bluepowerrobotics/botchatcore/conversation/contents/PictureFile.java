@@ -1,7 +1,7 @@
 package org.bluepowerrobotics.botchatcore.conversation.contents;
 
 public class PictureFile implements Content {
-    private StringBuffer pictureBase64 = new StringBuffer();
+    private final StringBuffer pictureBase64 = new StringBuffer();
 
     public PictureFile(String base64){
         pictureBase64.append(base64);

@@ -1,7 +1,7 @@
 package org.bluepowerrobotics.botchatcore.conversation.contents;
 
 public class RichText implements Content {
-    private StringBuffer content = new StringBuffer();
+    private final StringBuffer content = new StringBuffer();
 
     public RichText(String content){
         this.content.append(content);
