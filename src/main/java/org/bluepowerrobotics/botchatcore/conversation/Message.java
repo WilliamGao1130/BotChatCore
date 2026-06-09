@@ -2,10 +2,7 @@ package org.bluepowerrobotics.botchatcore.conversation;
 
 import org.bluepowerrobotics.botchatcore.conversation.contents.Content;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Message {
     public enum Role { SYSTEM, USER, MODEL };
@@ -21,13 +18,7 @@ public class Message {
     private boolean isFinished;           // 是否完全生成（仅在无子节点时生效）
     // ... getters/setters
 
-    public List<Map<String, Object>> getContents() {
-        List<Map<String,Object>> contents = new ArrayList<>();
-        for(Content content : this.contents){
-            Map<String, Object> map = new HashMap<>(1);
-            map.put(content.getKind(),content.get());
-            contents.add(map);
-        }
+    public List<Content> getContents() {
         return contents;
     }
 }
