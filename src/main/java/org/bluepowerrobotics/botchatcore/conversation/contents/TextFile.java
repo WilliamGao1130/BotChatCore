@@ -42,4 +42,15 @@ public class TextFile implements Content {
             return false;
         }
     }
+
+    private boolean finished=false;
+    @Override
+    public void finish() {
+        finished = true;
+    }
+
+    @Override
+    public boolean ifFinished() {
+        return finished;
+    }
 }

@@ -1,9 +1,10 @@
 package org.bluepowerrobotics.botchatcore.conversation.contents;
 
-public class ToolCall implements Content{
+public class ToolResult implements Content{
+
     @Override
     public String getKind() {
-        return "";
+        return "ToolCall";
     }
 
     @Override
@@ -24,6 +25,17 @@ public class ToolCall implements Content{
     @Override
     public boolean append(Object difference) {
         return false;
+    }
+
+    private boolean finished=false;
+    @Override
+    public void finish() {
+        finished = true;
+    }
+
+    @Override
+    public boolean ifFinished() {
+        return finished;
     }
 
 }

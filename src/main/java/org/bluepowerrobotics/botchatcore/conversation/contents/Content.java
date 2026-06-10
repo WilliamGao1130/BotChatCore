@@ -6,4 +6,6 @@ public interface Content {
     public Object get();
     public boolean overwrite(Object target);
     public boolean append(Object difference);
+    public void finish();
+    public boolean ifFinished();
 }

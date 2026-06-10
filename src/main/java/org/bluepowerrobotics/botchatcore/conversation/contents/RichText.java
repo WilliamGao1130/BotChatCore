@@ -2,6 +2,7 @@ package org.bluepowerrobotics.botchatcore.conversation.contents;
 
 public class RichText implements Content {
     private final StringBuffer content = new StringBuffer();
+    private boolean finished=false;
 
     public RichText(String content){
         this.content.append(content);
@@ -41,5 +42,14 @@ public class RichText implements Content {
         }else {
             return false;
         }
+    }
+    @Override
+    public void finish() {
+        finished = true;
+    }
+
+    @Override
+    public boolean ifFinished() {
+        return finished;
     }
 }

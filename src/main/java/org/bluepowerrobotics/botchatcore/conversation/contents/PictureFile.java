@@ -2,6 +2,7 @@ package org.bluepowerrobotics.botchatcore.conversation.contents;
 
 public class PictureFile implements Content {
     private final StringBuffer pictureBase64 = new StringBuffer();
+    private boolean finished = false;
 
     public PictureFile(String base64){
         pictureBase64.append(base64);
@@ -40,5 +41,15 @@ public class PictureFile implements Content {
         }else {
             return false;
         }
+    }
+
+    @Override
+    public void finish() {
+        finished = true;
+    }
+
+    @Override
+    public boolean ifFinished() {
+        return finished;
     }
 }

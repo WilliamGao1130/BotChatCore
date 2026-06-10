@@ -1,9 +1,9 @@
 package org.bluepowerrobotics.botchatcore.conversation.contents;
 
-public class Thinking implements Content {
+public class Reasoning implements Content {
     private final StringBuffer content = new StringBuffer();
 
-    public Thinking(String content){
+    public Reasoning(String content){
         this.content.append(content);
     }
 
@@ -42,4 +42,14 @@ public class Thinking implements Content {
             return false;
         }
     }
-}
+
+    private boolean finished=false;
+    @Override
+    public void finish() {
+        finished = true;
+    }
+
+    @Override
+    public boolean ifFinished() {
+        return finished;
+    }}
