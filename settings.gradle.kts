@@ -1,1 +1,1 @@
-rootProject.name = "BotChatCore"
+rootProject.name = "let-me-ask-you-core"
